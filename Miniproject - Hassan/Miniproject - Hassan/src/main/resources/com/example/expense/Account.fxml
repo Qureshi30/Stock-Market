@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane opacity="0.92" prefHeight="700.0" prefWidth="1027.0" style="-fx-background-color: #C4DAD2;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.expense.AccountController">
+   <children>
+      <AnchorPane layoutX="35.0" layoutY="331.0" prefHeight="332.0" prefWidth="927.0" style="-fx-background-color: #16423C; -fx-border-color: white;">
+         <children>
+            <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="8.0" prefHeight="40.0" prefWidth="261.0" text="Add Stock" textFill="#fcf1f1" underline="true">
+               <font>
+                  <Font name="Algerian" size="31.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="67.0" text="Name of Stock" textFill="#f2ecec">
+               <font>
+                  <Font name="Book Antiqua Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="119.0" text="Price (Per Piece)" textFill="WHITE">
+               <font>
+                  <Font name="Book Antiqua" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="388.0" layoutY="67.0" text="Type of Trade" textFill="#f5f0f0">
+               <font>
+                  <Font name="Book Antiqua Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="388.0" layoutY="121.0" text="Entry Date" textFill="#f8f8f1">
+               <font>
+                  <Font name="Book Antiqua Bold" size="19.0" />
+               </font>
+            </Label>
+            <Button layoutX="388.0" layoutY="256.0" mnemonicParsing="false" onAction="#addStock" prefHeight="32.0" prefWidth="126.0" style="-fx-background-color: #6A9C89;" text="Add+" textFill="WHITE">
+               <font>
+                  <Font name="Castellar" size="25.0" />
+               </font>
+            </Button>
+            <TextField fx:id="stockNameField" layoutX="187.0" layoutY="65.0" prefHeight="22.0" prefWidth="170.0" />
+            <TextField fx:id="priceField" layoutX="187.0" layoutY="119.0" prefHeight="31.0" prefWidth="170.0" />
+            <ComboBox fx:id="tradeTypeComboBox" layoutX="550.0" layoutY="65.0" prefHeight="31.0" prefWidth="193.0" promptText="Select Type" />
+            <DatePicker fx:id="entryDatePicker" layoutX="550.0" layoutY="117.0" prefHeight="31.0" prefWidth="193.0" />
+            <Label layoutX="388.0" layoutY="169.0" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="167.0" text="Quantity" textFill="#f5efef">
+               <font>
+                  <Font name="Book Antiqua" size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="quantityField" layoutX="187.0" layoutY="165.0" prefHeight="31.0" prefWidth="170.0" />
+            <Label layoutX="388.0" layoutY="164.0" prefHeight="31.0" prefWidth="96.0" text="Exit date" textFill="#f5efef">
+               <font>
+                  <Font name="Book Antiqua Bold" size="19.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="exitDatePicker" layoutX="550.0" layoutY="165.0" prefHeight="31.0" prefWidth="193.0" />
+            <TextField fx:id="sellPriceField" layoutX="187.0" layoutY="212.0" prefHeight="31.0" prefWidth="170.0" />
+            <Label layoutX="31.0" layoutY="211.0" prefHeight="26.0" prefWidth="90.0" text="Sell Price" textFill="#f5efef">
+               <font>
+                  <Font name="Book Antiqua Bold" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="stockTableView" layoutX="35.0" layoutY="42.0" prefHeight="262.0" prefWidth="913.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" prefWidth="211.20001602172852" text="Name of Stock" />
+          <TableColumn fx:id="quantityColumn" prefWidth="119.19999694824219" text="Quantity" />
+            <TableColumn fx:id="priceColumn" minWidth="0.0" prefWidth="139.199951171875" text="Price (Per Piece)" />
+            <TableColumn fx:id="tradeTypeColumn" prefWidth="148.0" text="Trade Type" />
+            <TableColumn fx:id="entryDateColumn" prefWidth="102.4000244140625" text="Entry Date" />
+            <TableColumn fx:id="exitDateColumn" prefWidth="96.79997558593755" text="Exit Date" />
+            <TableColumn fx:id="sellPriceColumn" prefWidth="94.39998779296877" text="Sell Price" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

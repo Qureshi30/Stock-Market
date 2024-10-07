@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="710.0" prefWidth="1370.0" style="-fx-background-color: #C4DAD2;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.expense.StockController">
+    <children>
+        <TableView fx:id="updatetable" layoutX="30.0" layoutY="98.0" prefHeight="547.0" prefWidth="1167.0" tableMenuButtonVisible="true">
+            <columns>
+            <TableColumn fx:id="stockId" prefWidth="91.19997787475586" style="-fx-border-color: black; -fx-font-size: 13;" text="Stock ID" />
+                <TableColumn fx:id="stockItemName" prefWidth="150.40003967285156" style="-fx-border-color: black; -fx-font-size: 13;" text="Stock Name" />
+                <TableColumn fx:id="stockItemQuantity" prefWidth="144.0" style="-fx-border-color: black; -fx-font-size: 13;" text="Quantity" />
+            <TableColumn fx:id="tradeTypeColumn" prefWidth="134.4000244140625" style="-fx-border-color: black; -fx-font-size: 13;" text="Trade Type" />
+                <TableColumn fx:id="stockItemEntryDate" prefWidth="131.199951171875" style="-fx-border-color: black; -fx-font-size: 13;" text="Entry Date" />
+                <TableColumn fx:id="stockItemExitDate" prefWidth="166.0" style="-fx-border-color: black; -fx-font-size: 13;" text="Exit Date" />
+                <TableColumn fx:id="stockItemPrice" prefWidth="166.0" style="-fx-border-color: black; -fx-font-size: 13;" text="Price(per piece)" />
+                <TableColumn fx:id="stockItemSellPrice" prefWidth="166.0" style="-fx-border-color: black; -fx-font-size: 13;" text="Sell Price" />
+            </columns>
+        </TableView>
+        <Pane layoutX="30.0" layoutY="26.0" prefHeight="64.0" prefWidth="1167.0" style="-fx-border-color: black; -fx-background-color: #6A9C89;">
+            <children>
+                <TextField fx:id="tf_search" layoutX="57.0" layoutY="13.0" onKeyReleased="#handleSearch" prefHeight="37.0" prefWidth="233.0" promptText="SEARCH  STOCKS" style="-fx-border-color: black; -fx-background-radius: 15; -fx-border-radius: 15;">
+                    <font>
+                        <Font name="Century" size="21.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </TextField>
+                <Button fx:id="btnUpdate" layoutX="385.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleUpdate" prefHeight="37.0" prefWidth="124.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15;" text="Update">
+                    <font>
+                        <Font name="Century Schoolbook" size="20.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </Button>
+                <Button fx:id="btnDelete" layoutX="585.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="37.0" prefWidth="124.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15;" text="Delete">
+                    <font>
+                        <Font name="Century Schoolbook" size="20.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </Button>
+                <Button fx:id="btnSaveToExcel" layoutX="780.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleSaveToExcel" prefHeight="38.0" prefWidth="170.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15;" text="Save To Excel">
+                    <font>
+                        <Font name="Century Schoolbook" size="20.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </Button>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
